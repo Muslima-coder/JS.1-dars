@@ -1,0 +1,59 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+  }
+  
+  .sky {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(160deg, #0f2027, #203a43, #2c5364); /* Chuqur, sokin ranglar */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 6rem;
+    font-weight: bold;
+    z-index: 1;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Yulduzlar */
+  .stars::before,
+  .stars::after {
+    content: "★ ★ ★ ★ ★";
+    position: absolute;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 2rem;
+    animation: twinkle 5s infinite ease-in-out alternate;
+  }
+  
+  .stars::before {
+    top: 10%;
+    left: 10%;
+    transform: rotate(15deg);
+  }
+  
+  .stars::after {
+    bottom: 10%;
+    right: 10%;
+    transform: rotate(-10deg);
+  }
+  
+  @keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+  }
+  
